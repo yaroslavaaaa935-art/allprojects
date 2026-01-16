@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Юдина Ярослава | Web-Design </title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- Хедер -->
+        <header class="main-header">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>
+                        <span>Юдина Ярослава</span>
+                    </h1>
+                    <p class="subtitle">Проекты по дисциплине Web-Design</p>
+                </div>
+                <div class="theme-toggle-container">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                        <i class="fas fa-moon"></i>
+                        <span class="theme-text">Тёмная</span>
+                    </button>
+                </div>
+            </div>
+            <div class="accent-line"></div>
+        </header>
+
+        <!-- Навигация по разделам -->
+        <nav class="main-nav">
+            <div class="nav-container">
+                <button class="nav-btn active" data-target="tasks">
+                    <i class="fas fa-tasks"></i>
+                    <span>Задания</span>
+                </button>
+                <button class="nav-btn" data-target="final">
+                    <i class="fas fa-star"></i>
+                    <span>Итоговый проект</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Основное содержимое -->
+        <main class="main-content">
+            <!-- Секция заданий -->
+            <section class="content-section active-section" id="tasksSection">
+                <div class="section-header">
+                    <h2><i class="fas fa-list-ol"></i> Список заданий</h2>
+                    <div class="section-stats">
+                        <span class="stat-badge">
+                            <i class="fas fa-hashtag"></i>
+                            <span id="tasksCount">0</span> проектов
+                        </span>
+                    </div>
+                </div>
+
+                <div class="tasks-container">
+                    <div class="tasks-grid" id="tasksGrid">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Секция итогового проекта -->
+            <section class="content-section" id="finalSection">
+                <div class="section-header">
+                    <h2><i class="fas fa-trophy"></i> Итоговый проект</h2>
+                    <div class="section-stats">
+                        <span class="stat-badge final">
+                            <i class="fas fa-flag-checkered"></i>
+                            Финальная работа
+                        </span>
+                    </div>
+                </div>
+
+                <div class="final-container">
+                    <div class="final-card" id="finalProjectCard">
+                    </div>
+                    
+                    <div class="project-description">
+                        <h3><i class="fas fa-info-circle"></i> Описание проекта</h3>
+                        <p>Итоговый проект представляет собой сайт, демонстрирующий все навыки, полученные в течение курса. Реализовано интерактивное меню, с добавлением в корзину и расчётом времени приготовления.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Футер -->
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>© <span id="currentYear">2026</span> Юдина Ярослава</p>
+                    <p class="footer-hint">Все проекты размещены на GitHub Pages и доступны онлайн</p>
+                </div>
+                <div class="footer-actions">
+                    <button class="action-btn" id="helpBtn">
+                        <i class="fas fa-question"></i>
+                        <span>Помощь</span>
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Модальное окно помощи -->
+    <div class="modal-overlay" id="helpModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Как использовать сайт?</h3>
+                <button class="modal-close" id="closeHelpModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="instruction-step">
+                    <div class="step-number">1</div>
+                    <div class="step-text">
+                        <h4>Выберите раздел</h4>
+                        <p>Используйте кнопки навигации вверху страницы для переключения между <strong>Заданиями</strong> и <strong>Итоговым проектом</strong>.</p>
+                    </div>
+                </div>
+                <div class="instruction-step">
+                    <div class="step-number">2</div>
+                    <div class="step-text">
+                        <h4>Откройте проект</h4>
+                        <p>Нажмите на любую карточку задания, чтобы открыть проект в новой вкладке браузера.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
